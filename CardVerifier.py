@@ -12,12 +12,12 @@ cardNumberStr = str(input('Card Number: '))
 cardNumberInt = int(cardNumberStr)
 cardNumberLen = len(cardNumberStr)
 
-while cardNumberInt <= 0:
+while cardNumberLen <= 0:
     print(cardNumberInt)
    
   
        
 
 #for len(cardNumberStr):
-# 5502090966601067 5
-     11
+# 5502090966601067 
+    
