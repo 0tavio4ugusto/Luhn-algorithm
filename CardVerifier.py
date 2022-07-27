@@ -7,4 +7,17 @@
 # mastercard cards start with 51-55 and have 16 digits
 # visa cards start with 4 and have 13 or 16 digits
 
- 
+
+cardNumberStr = str(input('Card Number: '))
+cardNumberInt = int(cardNumberStr)
+cardNumberLen = len(cardNumberStr)
+
+while cardNumberInt <= 0:
+    print(cardNumberInt)
+   
+  
+       
+
+#for len(cardNumberStr):
+# 5502090966601067 5
+     11
