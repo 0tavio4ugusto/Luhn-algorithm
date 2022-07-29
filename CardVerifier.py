@@ -15,25 +15,23 @@ cardNumberLen = len(cardNumberStr)
 
 
 firstCounter = cardNumberLen
-firstJubilu = 1
+firstPacing= 1
 firstSum = 0
 
 secondCounter = cardNumberLen-1
-secondJubilu = 2
+secondPacing = 2
 secondSum = 0
 termSum = 0
 
 
-while firstJubilu <= cardNumberLen:
+while firstPacing <= cardNumberLen:
     currentNumber = (cardNumberInt // (10**(cardNumberLen-firstCounter)) % 10)
-    print((cardNumberInt // (10**(cardNumberLen-firstCounter)) % 10))
-    firstJubilu += 2
+    firstPacing += 2
     firstCounter -= 2
     firstSum = firstSum + currentNumber
    
-print (firstSum)
 
-while secondJubilu <= cardNumberLen:
+while secondPacing <= cardNumberLen:
     currentNumberTwo = (cardNumberInt // (10**(cardNumberLen-secondCounter)) % 10)
     doubledCurrentNumberTwo = currentNumberTwo * 2
     
@@ -41,19 +39,26 @@ while secondJubilu <= cardNumberLen:
         firstTerm = (doubledCurrentNumberTwo // 1) % 10
         secondTerm = (doubledCurrentNumberTwo // 10) % 10
         
+        secondPacing += 2
+        secondCounter -= 2
+        
 
         secondSum =  secondSum + (firstTerm + secondTerm)
         
     else:         
         
-        secondJubilu += 2
+        secondPacing += 2
         secondCounter -= 2
         secondSum = secondSum + doubledCurrentNumberTwo
         
-print((cardNumberInt // (10**(cardNumberLen-secondCounter)) % 10))
 finalSecondSum = termSum + secondSum
         
-print (finalSecondSum)
-#for len(cardNumberStr):
+
+if (finalSecondSum + firstSum) % 10  == 0:
+    print('=== VALID CARD NUMBER ===')
+else:
+    print('=== INVALID CARD NUMBER ===')
+    
+
 # 5502090966601067 
     
