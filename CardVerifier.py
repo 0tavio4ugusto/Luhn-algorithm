@@ -21,6 +21,7 @@ firstSum = 0
 secondCounter = cardNumberLen-1
 secondJubilu = 2
 secondSum = 0
+termSum = 0
 
 
 while firstJubilu <= cardNumberLen:
@@ -33,22 +34,24 @@ while firstJubilu <= cardNumberLen:
 print (firstSum)
 
 while secondJubilu <= cardNumberLen:
-    currentNumberTwo = 2 * (cardNumberInt // (10**(cardNumberLen-secondCounter)) % 10)
-    if currentNumberTwo / 10 >= 1:
-        firstTerm = currentNumberTwo // 1 % 10
-        secondTerm = currentNumberTwo // 10 % 10
+    currentNumberTwo = 2* (cardNumberInt // (10**(cardNumberLen-secondCounter)) % 10)
+    if (currentNumberTwo / 10) > 1:
+        firstTerm = (currentNumberTwo // 1) % 10
+        secondTerm = (currentNumberTwo // 10) % 10
         
         finalTerm = firstTerm + secondTerm
-        secondSum = secondSum + finalTerm
+        termSum = termSum + finalTerm
         
-    elif currentNumberTwo / 10 <= 1:
+    else:
          
         print((cardNumberInt // (10**(cardNumberLen-secondCounter)) % 10))
         secondJubilu += 2
         secondCounter -= 2
-        secondSum = secondSum + currentNumber
+        secondSum = secondSum + currentNumberTwo
+
+finalSecondSum = termSum + secondSum
         
-print (secondSum)
+print (finalSecondSum)
 #for len(cardNumberStr):
 # 5502090966601067 
     
