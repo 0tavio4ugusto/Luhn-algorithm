@@ -34,10 +34,10 @@ while firstJubilu <= cardNumberLen:
 print (firstSum)
 
 while secondJubilu <= cardNumberLen:
-    currentNumberTwo = 2* (cardNumberInt // (10**(cardNumberLen-secondCounter)) % 10)
-    if (currentNumberTwo / 10) > 1:
-        firstTerm = (currentNumberTwo // 1) % 10
-        secondTerm = (currentNumberTwo // 10) % 10
+    currentNumberTwo = (cardNumberInt // (10**(cardNumberLen-secondCounter)) % 10)
+    if ((2 *currentNumberTwo) / 10) > 1:
+        firstTerm = ((2*currentNumberTwo) // 1) % 10
+        secondTerm = ((2*currentNumberTwo) // 10) % 10
         
         finalTerm = firstTerm + secondTerm
         termSum = termSum + finalTerm
