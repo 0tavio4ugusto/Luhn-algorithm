@@ -35,14 +35,14 @@ print (firstSum)
 
 while secondJubilu <= cardNumberLen:
     currentNumberTwo = (cardNumberInt // (10**(cardNumberLen-secondCounter)) % 10)
-    doubledCurrentNumberTwo = currentNumberTwo + currentNumberTwo
+    doubledCurrentNumberTwo = currentNumberTwo * 2
     
-    if ((doubledCurrentNumberTwo) / 10) > 1:
-        firstTerm = ((doubledCurrentNumberTwo) // 1) % 10
-        secondTerm = ((doubledCurrentNumberTwo) // 10) % 10
+    if ((doubledCurrentNumberTwo) / 10) >= 1:
+        firstTerm = (doubledCurrentNumberTwo // 1) % 10
+        secondTerm = (doubledCurrentNumberTwo // 10) % 10
         
-        finalTerm = firstTerm + secondTerm
-        termSum = termSum + finalTerm
+
+        termSum = firstTerm + secondTerm
         
     else:
          
