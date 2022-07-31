@@ -52,13 +52,18 @@ while secondPacing <= cardNumberLen:
         secondSum = secondSum + doubledCurrentNumberTwo
         
 finalSecondSum = termSum + secondSum
+    
         
 
 if (finalSecondSum + firstSum) % 10  == 0:
     print('=== VALID CARD NUMBER ===')
+    if cardNumberStr[0] == ('4'):
+        print('=== VISA ===')
+    elif cardNumberStr[0] == ('3'):
+        print('=== AMERICAN EXPRESS ===')
+    elif cardNumberStr[0] == ('5'):
+        print('=== MASTERCARD ===')
 else:
     print('=== INVALID CARD NUMBER ===')
-    
 
-# 5502090966601067 
     
